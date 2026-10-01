@@ -39,12 +39,7 @@ h2 {
     margin: 0 0 20px 20px;
     border: 1px solid #222222;
 }
-.magazine-card {
-    width: 200px;
-}
-.magazine-card img {
-    width: 100%;
-}
+
 .story-text {
     font-size: 17px;
     line-height: 1.5;
@@ -57,16 +52,16 @@ h2 {
 }
 .magazine-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 200px);
     gap: 25px;
 }
 
 .magazine-card {
-    width: 100%;
+    width: 200px;
 }
 
 .magazine-card img {
-    width: 100%;
+    width: 200px;
+    height: auto;
     display: block;
 }
-
