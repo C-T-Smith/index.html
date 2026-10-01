@@ -83,3 +83,24 @@ h2 {
 .magazine-card .card-description {
     text-align: center;
 }
+.back-button {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    background-color: #2f6fbb;
+    color: white;
+
+    text-decoration: none;
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 16px;
+
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #245a99;
+}
