@@ -12,7 +12,13 @@ h1 {
     margin-bottom: 5px;
 }
 
+
 .subtitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+.magtitle {
     text-align: center;
     font-style: italic;
 }
