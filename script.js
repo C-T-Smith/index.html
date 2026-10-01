@@ -7,7 +7,9 @@ searchBox.addEventListener("input", function() {
 
     cards.forEach(function(card) {
 
-        const cardText = card.textContent.toLowerCase();
+        const cardText = (
+    card.textContent + " " + card.dataset.title
+).toLowerCase();
 
         if (cardText.includes(searchText)) {
             card.style.display = "";
