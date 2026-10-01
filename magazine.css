@@ -39,3 +39,9 @@ p {
     margin: 0 0 20px 20px;
     border: 1px solid #222222;
 }
+.magazine-card {
+    width: 200px;
+}
+.magazine-card img {
+    width: 100%;
+}
