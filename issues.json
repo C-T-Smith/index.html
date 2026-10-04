@@ -3,7 +3,7 @@
         "number": 1,
         "title": "The Man in the Grey Suit",
         "file": "issue1.html",
-        "cover": "issue1cover.png"
+        "cover": "issue1cover.png",
         "description": "Fiction • Mystery"
     },
     {
@@ -38,7 +38,7 @@
         "number": 6,
         "title": "The Hearing of Uther Wyrmstyle",
         "file": "issue6.html",
-        "cover": "issue3cover.png",
+        "cover": "issue6cover.png",
         "description": "Fiction • Absurd"
     }
 
