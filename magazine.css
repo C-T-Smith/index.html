@@ -60,8 +60,14 @@ h2 {
     gap: 25px;
     overflow-x: auto;
     padding-bottom: 15px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
+.magazine-row::-webkit-scrollbar {
+    display: none;
+}
 
 /* Individual magazine cards */
 
