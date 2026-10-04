@@ -59,7 +59,6 @@ h2 {
     display: flex;
     gap: 25px;
     overflow-x: auto;
-    padding-bottom: 15px;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
