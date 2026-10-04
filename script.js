@@ -1,7 +1,6 @@
 fetch("issues.json")
     .then(response => response.json())
     .then(issues => {
-
-        console.log(issues);
-
+        document.querySelector("h2").textContent =
+            "Found " + issues.length + " issues!";
     });
