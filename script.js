@@ -1,22 +1,7 @@
-const searchBox = document.getElementById("search");
-const cards = document.querySelectorAll(".magazine-card");
+fetch("issues.json")
+    .then(response => response.json())
+    .then(issues => {
 
-searchBox.addEventListener("input", function() {
-
-    const searchText = searchBox.value.toLowerCase();
-
-    cards.forEach(function(card) {
-
-        const cardText = (
-    card.textContent + " " + card.dataset.title
-).toLowerCase();
-
-        if (cardText.includes(searchText)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
-        }
+        console.log(issues);
 
     });
-
-});
