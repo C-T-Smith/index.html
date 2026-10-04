@@ -55,19 +55,25 @@ h2 {
 
 /* Magazine shelves */
 
+/* Magazine shelves */
+
 .magazine-row {
     display: flex;
     gap: 25px;
     overflow-x: auto;
+    padding-bottom: 15px;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
+/* Hide the scrollbar in Chrome and Edge */
+
 .magazine-row::-webkit-scrollbar {
+    width: 0;
+    height: 0;
     display: none;
 }
-
 /* Individual magazine cards */
 
 .magazine-card {
