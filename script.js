@@ -4,7 +4,12 @@ fetch("issues.json")
 
         const issueContainer = document.getElementById("issues");
         const continueContainer = document.getElementById("continue-reading");
+        const connectedContainer = document.getElementById("connected-stories");
+        const standaloneContainer = document.getElementById("standalone-stories");
         const searchBox = document.getElementById("search");
+
+
+        // Create one magazine card
 
         function createCard(issue) {
 
@@ -22,16 +27,79 @@ fetch("issues.json")
             return card;
         }
 
-        function displayIssues(issueList) {
 
-            issueContainer.innerHTML = "";
+        // Put a list of issues into a shelf
+
+        function displayIssues(container, issueList) {
+
+            container.innerHTML = "";
 
             issueList.forEach(function(issue) {
-                issueContainer.appendChild(createCard(issue));
+                container.appendChild(createCard(issue));
             });
+
         }
 
-        displayIssues(issues);
+
+        // --------------------------------
+        // LATEST RELEASES
+        // --------------------------------
+
+        const latestIssues = [...issues].sort(function(a, b) {
+            return b.number - a.number;
+        });
+
+        displayIssues(issueContainer, latestIssues);
+
+
+        // --------------------------------
+        // CONTINUE READING
+        // --------------------------------
+
+        const unfinishedIssues = issues
+            .filter(function(issue) {
+                return localStorage.getItem("issue" + issue.number) === "in-progress";
+            })
+            .sort(function(a, b) {
+                return b.number - a.number;
+            });
+
+        displayIssues(continueContainer, unfinishedIssues);
+
+
+        // --------------------------------
+        // CONNECTED STORIES
+        // --------------------------------
+
+        const connectedIssues = issues
+            .filter(function(issue) {
+                return issue.series !== null;
+            })
+            .sort(function(a, b) {
+                return b.number - a.number;
+            });
+
+        displayIssues(connectedContainer, connectedIssues);
+
+
+        // --------------------------------
+        // STANDALONE STORIES
+        // --------------------------------
+
+        const standaloneIssues = issues
+            .filter(function(issue) {
+                return issue.series === null;
+            })
+            .sort(function(a, b) {
+                return b.number - a.number;
+            });
+
+        displayIssues(standaloneContainer, standaloneIssues);
+
+
+        // --------------------------------
+        // SEARCH
+        // --------------------------------
 
         searchBox.addEventListener("input", function() {
 
@@ -47,21 +115,7 @@ fetch("issues.json")
 
             });
 
-            displayIssues(matchingIssues);
-        });
-
-
-        // CONTINUE READING
-
-        const unfinishedIssues = issues.filter(function(issue) {
-
-            return localStorage.getItem("issue" + issue.number) === "in-progress";
-
-        });
-
-        unfinishedIssues.forEach(function(issue) {
-
-            continueContainer.appendChild(createCard(issue));
+            displayIssues(issueContainer, matchingIssues);
 
         });
 
