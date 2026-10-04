@@ -4,42 +4,48 @@
         "title": "The Man in the Grey Suit",
         "file": "issue1.html",
         "cover": "issue1cover.png",
-        "description": "Fiction • Mystery"
+        "description": "Fiction • Mystery",
+        "series": null
     },
     {
         "number": 2,
         "title": "The Infamous Snipe",
         "file": "issue2.html",
         "cover": "issue2cover.png",
-        "description": "Fiction • Whimsical"
+        "description": "Fiction • Whimsical",
+        "series": null
     },
     {
         "number": 3,
         "title": "The Apple Tree",
         "file": "issue3.html",
         "cover": "issue3cover.png",
-        "description": "Fiction • Faerie"
+        "description": "Fiction • Faerie",
+        "series": null
     },
     {
         "number": 4,
         "title": "Jam, an Excercise in Dialogue",
         "file": "issue4.html",
         "cover": "issue4cover.png",
-        "description": "Fiction • Witty"
+        "description": "Fiction • Witty",
+        "series": null
     },
     {
         "number": 5,
         "title": "The Frozen Wanderer",
         "file": "issue5.html",
         "cover": "issue5cover.png",
-        "description": "Fiction • Ethereal"
+        "description": "Fiction • Ethereal",
+        "series": null
     },
     {
         "number": 6,
         "title": "The Hearing of Uther Wyrmstyle",
         "file": "issue6.html",
         "cover": "Issue6cover.png",
-        "description": "Fiction • Absurd"
+        "description": "Fiction • Absurd",
+        "series": "The Hearing of Uther Wyrmstyle"
     }
 
 
